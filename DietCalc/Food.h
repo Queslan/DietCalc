@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include <array>
 #include <sstream>
 #include <unordered_map>
 
@@ -10,6 +9,8 @@ public:
 
 	double getFullValue(double value);
 	void getFoodContents();
+	void updateFoodContents();
+	bool foodMapEmpty();
 	std::string showContents();
 	std::string getName();
 	void setMass(double mass);

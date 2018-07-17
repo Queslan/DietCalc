@@ -37,6 +37,7 @@ public:
     QPushButton *pickButton;
     QPushButton *undoButton;
     QPushButton *chooseButton;
+    QPushButton *testButton;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -75,6 +76,9 @@ public:
         chooseButton = new QPushButton(centralWidget);
         chooseButton->setObjectName(QStringLiteral("chooseButton"));
         chooseButton->setGeometry(QRect(540, 370, 75, 23));
+        testButton = new QPushButton(centralWidget);
+        testButton->setObjectName(QStringLiteral("testButton"));
+        testButton->setGeometry(QRect(250, 370, 75, 23));
         DietCalcClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(DietCalcClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -101,6 +105,7 @@ public:
         pickButton->setText(QApplication::translate("DietCalcClass", "Pick", nullptr));
         undoButton->setText(QApplication::translate("DietCalcClass", "Undo", nullptr));
         chooseButton->setText(QApplication::translate("DietCalcClass", "Choose", nullptr));
+        testButton->setText(QApplication::translate("DietCalcClass", "TEST", nullptr));
     } // retranslateUi
 
 };

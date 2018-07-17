@@ -1,0 +1,14 @@
+
+.vs/DietCalc/v15/.suo
+*.obj
+*.tlog
+*.log
+.vs/DietCalc/v15/Browse.VC.db
+.vs/DietCalc/v15/Browse.VC.opendb
+.vs/DietCalc/v15/ipch/AutoPCH/3989320facb19ba0/DIETCALC.ipch
+.vs/DietCalc/v15/ipch/AutoPCH/25f5973ab604df4a/MAIN.ipch
+.vs/DietCalc/v15/ipch/AutoPCH/fe8c338941a678e3/FOOD.ipch
+Win32/Debug/DietCalc.exe
+Win32/Debug/DietCalc.ilk
+Win32/Debug/DietCalc.pdb
+DietCalc/Debug/vc141.pdb

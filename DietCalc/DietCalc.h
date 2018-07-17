@@ -5,6 +5,7 @@
 
 #include "Food.h"
 
+
 class DietCalc : public QMainWindow
 {
 	Q_OBJECT
@@ -17,8 +18,9 @@ private slots:
 	void insertItems();
 	void on_chooseButton_clicked();
 	void on_undoButton_clicked();
+	void on_testButton_clicked();
 	void changeCalories();
-	Food getCurrentObject();
+	Food* getCurrentObject();
 
 private:
 	Ui::DietCalcClass ui;
