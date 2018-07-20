@@ -2,6 +2,7 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_DietCalc.h"
+#include "SecondWindow.h"
 
 #include "Food.h"
 
@@ -12,6 +13,7 @@ class DietCalc : public QMainWindow
 
 public:
 	DietCalc(QWidget *parent = Q_NULLPTR);
+	SecondWindow secondWindow;
 
 private slots:
 	void on_pickButton_clicked();

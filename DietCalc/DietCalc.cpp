@@ -1,11 +1,13 @@
 #include "DietCalc.h"
+#include "SecondWindow.h"
+#include "DataBase.h"
 
 #include <iostream>
 #include <vector>
 #include <memory>
 #include <unordered_map>
 
-static std::vector <Food*> foodVector;
+std::vector <Food*> foodVector;
 static double totalCalories = 0;
 static double currentCalories = 0;
 static bool mealPicked = false;
@@ -20,6 +22,8 @@ DietCalc::DietCalc(QWidget *parent)
 	for (auto food : foodVector) {
 		ui.itemBox->addItem(QString::fromStdString(food->getName()));
 	}
+	auto dataBase = new DataBase;
+	dataBase->Connect();
 }
 
 
@@ -58,12 +62,7 @@ void DietCalc::on_undoButton_clicked() {
 }
 
 void DietCalc::on_testButton_clicked() {
-	auto myObject = getCurrentObject();
-	myObject->getFoodContents();
-	auto mass = myObject->getMass();
-	auto calories = myObject->getCalories();
-	std::cout << mass << '\n'; 
-	std::cout << calories << '\n';
+	secondWindow.show();
 }
 
 void DietCalc::changeCalories() {

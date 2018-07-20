@@ -47,6 +47,7 @@ public:
         if (DietCalcClass->objectName().isEmpty())
             DietCalcClass->setObjectName(QStringLiteral("DietCalcClass"));
         DietCalcClass->resize(618, 450);
+        DietCalcClass->setCursor(QCursor(Qt::CrossCursor));
         centralWidget = new QWidget(DietCalcClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         nameLabel = new QLabel(centralWidget);
