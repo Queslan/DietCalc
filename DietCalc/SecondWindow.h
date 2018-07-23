@@ -2,9 +2,9 @@
 
 #include <QWidget>
 #include "ui_SecondWindow.h"
+#include "Food.h"
 
-class SecondWindow : public QWidget
-{
+class SecondWindow : public QWidget {
 	Q_OBJECT
 
 public:
@@ -12,8 +12,13 @@ public:
 	~SecondWindow();
 
 private slots:
-	void fillUpContents();
+	Food * getCurrentObject();
+	void on_pickButton_clicked();
+	void insertItems();
 	void on_chooseButton_clicked();
+	void on_undoButton_clicked();
+	void changeCalories();
+
 private:
 	Ui::SecondWindow ui;
 };

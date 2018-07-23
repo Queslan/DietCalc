@@ -4,26 +4,18 @@
 #include "ui_DietCalc.h"
 #include "SecondWindow.h"
 
-#include "Food.h"
 
 
-class DietCalc : public QMainWindow
-{
+class DietCalc : public QMainWindow {
 	Q_OBJECT
 
 public:
 	DietCalc(QWidget *parent = Q_NULLPTR);
-	SecondWindow secondWindow;
-
 private slots:
-	void on_pickButton_clicked();
-	void insertItems();
-	void on_chooseButton_clicked();
-	void on_undoButton_clicked();
-	void on_testButton_clicked();
-	void changeCalories();
-	Food* getCurrentObject();
+	void on_nextButton_clicked();
+
 
 private:
 	Ui::DietCalcClass ui;
+	SecondWindow secondWindow;
 };

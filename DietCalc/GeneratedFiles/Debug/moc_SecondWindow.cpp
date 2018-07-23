@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_SecondWindow_t {
-    QByteArrayData data[4];
-    char stringdata0[53];
+    QByteArrayData data[9];
+    char stringdata0[132];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,13 +32,20 @@ struct qt_meta_stringdata_SecondWindow_t {
 static const qt_meta_stringdata_SecondWindow_t qt_meta_stringdata_SecondWindow = {
     {
 QT_MOC_LITERAL(0, 0, 12), // "SecondWindow"
-QT_MOC_LITERAL(1, 13, 14), // "fillUpContents"
-QT_MOC_LITERAL(2, 28, 0), // ""
-QT_MOC_LITERAL(3, 29, 23) // "on_chooseButton_clicked"
+QT_MOC_LITERAL(1, 13, 16), // "getCurrentObject"
+QT_MOC_LITERAL(2, 30, 5), // "Food*"
+QT_MOC_LITERAL(3, 36, 0), // ""
+QT_MOC_LITERAL(4, 37, 21), // "on_pickButton_clicked"
+QT_MOC_LITERAL(5, 59, 11), // "insertItems"
+QT_MOC_LITERAL(6, 71, 23), // "on_chooseButton_clicked"
+QT_MOC_LITERAL(7, 95, 21), // "on_undoButton_clicked"
+QT_MOC_LITERAL(8, 117, 14) // "changeCalories"
 
     },
-    "SecondWindow\0fillUpContents\0\0"
-    "on_chooseButton_clicked"
+    "SecondWindow\0getCurrentObject\0Food*\0"
+    "\0on_pickButton_clicked\0insertItems\0"
+    "on_chooseButton_clicked\0on_undoButton_clicked\0"
+    "changeCalories"
 };
 #undef QT_MOC_LITERAL
 
@@ -48,7 +55,7 @@ static const uint qt_meta_data_SecondWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -56,10 +63,18 @@ static const uint qt_meta_data_SecondWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   24,    2, 0x08 /* Private */,
-       3,    0,   25,    2, 0x08 /* Private */,
+       1,    0,   44,    3, 0x08 /* Private */,
+       4,    0,   45,    3, 0x08 /* Private */,
+       5,    0,   46,    3, 0x08 /* Private */,
+       6,    0,   47,    3, 0x08 /* Private */,
+       7,    0,   48,    3, 0x08 /* Private */,
+       8,    0,   49,    3, 0x08 /* Private */,
 
  // slots: parameters
+    0x80000000 | 2,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -72,12 +87,16 @@ void SecondWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         SecondWindow *_t = static_cast<SecondWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->fillUpContents(); break;
-        case 1: _t->on_chooseButton_clicked(); break;
+        case 0: { Food* _r = _t->getCurrentObject();
+            if (_a[0]) *reinterpret_cast< Food**>(_a[0]) = std::move(_r); }  break;
+        case 1: _t->on_pickButton_clicked(); break;
+        case 2: _t->insertItems(); break;
+        case 3: _t->on_chooseButton_clicked(); break;
+        case 4: _t->on_undoButton_clicked(); break;
+        case 5: _t->changeCalories(); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject SecondWindow::staticMetaObject = {
@@ -105,13 +124,13 @@ int SecondWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 6)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 2;
+        _id -= 6;
     }
     return _id;
 }

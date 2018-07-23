@@ -6,136 +6,104 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>618</width>
-    <height>450</height>
+    <width>633</width>
+    <height>540</height>
    </rect>
-  </property>
-  <property name="cursor">
-   <cursorShape>CrossCursor</cursorShape>
   </property>
   <property name="windowTitle">
    <string>DietCalc</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="nameLabel">
+   <widget class="QLabel" name="caloriesLabel">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>47</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Name</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="massLabel">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>110</y>
-      <width>47</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Mass</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="itemBox">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>50</y>
+      <x>110</x>
+      <y>160</y>
       <width>111</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="totalcaloriesLabel">
-    <property name="geometry">
-     <rect>
-      <x>430</x>
-      <y>0</y>
-      <width>131</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Total Calories: 0</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="massEdit">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>110</y>
-      <width>113</width>
       <height>20</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QTextBrowser" name="contentsBrowser">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>140</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
+    <property name="text">
+     <string>Total calories wanted</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pickButton">
+   <widget class="QLabel" name="titleLabel">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>370</y>
-      <width>75</width>
-      <height>23</height>
+      <x>210</x>
+      <y>10</y>
+      <width>181</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="text">
-     <string>Pick</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;DietCalc&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="undoButton">
+   <widget class="QPushButton" name="nextButton">
     <property name="geometry">
      <rect>
       <x>460</x>
-      <y>370</y>
-      <width>75</width>
-      <height>23</height>
+      <y>430</y>
+      <width>121</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Undo</string>
+     <string>NEXT -&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="chooseButton">
+   <widget class="QComboBox" name="mealsBox">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>370</y>
-      <width>75</width>
-      <height>23</height>
+      <x>290</x>
+      <y>110</y>
+      <width>41</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="mealsLabel">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>110</y>
+      <width>101</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Choose</string>
+     <string>Amount of meals</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="testButton">
+   <widget class="QLineEdit" name="caloriesEdit">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>370</y>
-      <width>75</width>
-      <height>23</height>
+      <x>270</x>
+      <y>160</y>
+      <width>113</width>
+      <height>20</height>
      </rect>
-    </property>
-    <property name="text">
-     <string>TEST</string>
     </property>
    </widget>
   </widget>
@@ -144,7 +112,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>618</width>
+     <width>633</width>
      <height>21</height>
     </rect>
    </property>

@@ -18,7 +18,6 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -28,16 +27,12 @@ class Ui_DietCalcClass
 {
 public:
     QWidget *centralWidget;
-    QLabel *nameLabel;
-    QLabel *massLabel;
-    QComboBox *itemBox;
-    QLabel *totalcaloriesLabel;
-    QLineEdit *massEdit;
-    QTextBrowser *contentsBrowser;
-    QPushButton *pickButton;
-    QPushButton *undoButton;
-    QPushButton *chooseButton;
-    QPushButton *testButton;
+    QLabel *caloriesLabel;
+    QLabel *titleLabel;
+    QPushButton *nextButton;
+    QComboBox *mealsBox;
+    QLabel *mealsLabel;
+    QLineEdit *caloriesEdit;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -46,44 +41,35 @@ public:
     {
         if (DietCalcClass->objectName().isEmpty())
             DietCalcClass->setObjectName(QStringLiteral("DietCalcClass"));
-        DietCalcClass->resize(618, 450);
-        DietCalcClass->setCursor(QCursor(Qt::CrossCursor));
+        DietCalcClass->resize(633, 540);
         centralWidget = new QWidget(DietCalcClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        nameLabel = new QLabel(centralWidget);
-        nameLabel->setObjectName(QStringLiteral("nameLabel"));
-        nameLabel->setGeometry(QRect(10, 40, 47, 13));
-        massLabel = new QLabel(centralWidget);
-        massLabel->setObjectName(QStringLiteral("massLabel"));
-        massLabel->setGeometry(QRect(10, 110, 47, 13));
-        itemBox = new QComboBox(centralWidget);
-        itemBox->setObjectName(QStringLiteral("itemBox"));
-        itemBox->setGeometry(QRect(190, 50, 111, 22));
-        totalcaloriesLabel = new QLabel(centralWidget);
-        totalcaloriesLabel->setObjectName(QStringLiteral("totalcaloriesLabel"));
-        totalcaloriesLabel->setGeometry(QRect(430, 0, 131, 41));
-        massEdit = new QLineEdit(centralWidget);
-        massEdit->setObjectName(QStringLiteral("massEdit"));
-        massEdit->setGeometry(QRect(190, 110, 113, 20));
-        contentsBrowser = new QTextBrowser(centralWidget);
-        contentsBrowser->setObjectName(QStringLiteral("contentsBrowser"));
-        contentsBrowser->setGeometry(QRect(190, 140, 256, 192));
-        pickButton = new QPushButton(centralWidget);
-        pickButton->setObjectName(QStringLiteral("pickButton"));
-        pickButton->setGeometry(QRect(0, 370, 75, 23));
-        undoButton = new QPushButton(centralWidget);
-        undoButton->setObjectName(QStringLiteral("undoButton"));
-        undoButton->setGeometry(QRect(460, 370, 75, 23));
-        chooseButton = new QPushButton(centralWidget);
-        chooseButton->setObjectName(QStringLiteral("chooseButton"));
-        chooseButton->setGeometry(QRect(540, 370, 75, 23));
-        testButton = new QPushButton(centralWidget);
-        testButton->setObjectName(QStringLiteral("testButton"));
-        testButton->setGeometry(QRect(250, 370, 75, 23));
+        caloriesLabel = new QLabel(centralWidget);
+        caloriesLabel->setObjectName(QStringLiteral("caloriesLabel"));
+        caloriesLabel->setGeometry(QRect(110, 160, 111, 20));
+        titleLabel = new QLabel(centralWidget);
+        titleLabel->setObjectName(QStringLiteral("titleLabel"));
+        titleLabel->setGeometry(QRect(210, 10, 181, 91));
+        nextButton = new QPushButton(centralWidget);
+        nextButton->setObjectName(QStringLiteral("nextButton"));
+        nextButton->setGeometry(QRect(460, 430, 121, 31));
+        mealsBox = new QComboBox(centralWidget);
+        mealsBox->addItem(QString());
+        mealsBox->addItem(QString());
+        mealsBox->addItem(QString());
+        mealsBox->addItem(QString());
+        mealsBox->setObjectName(QStringLiteral("mealsBox"));
+        mealsBox->setGeometry(QRect(290, 110, 41, 22));
+        mealsLabel = new QLabel(centralWidget);
+        mealsLabel->setObjectName(QStringLiteral("mealsLabel"));
+        mealsLabel->setGeometry(QRect(130, 110, 101, 20));
+        caloriesEdit = new QLineEdit(centralWidget);
+        caloriesEdit->setObjectName(QStringLiteral("caloriesEdit"));
+        caloriesEdit->setGeometry(QRect(270, 160, 113, 20));
         DietCalcClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(DietCalcClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 618, 21));
+        menuBar->setGeometry(QRect(0, 0, 633, 21));
         DietCalcClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(DietCalcClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -100,13 +86,15 @@ public:
     void retranslateUi(QMainWindow *DietCalcClass)
     {
         DietCalcClass->setWindowTitle(QApplication::translate("DietCalcClass", "DietCalc", nullptr));
-        nameLabel->setText(QApplication::translate("DietCalcClass", "Name", nullptr));
-        massLabel->setText(QApplication::translate("DietCalcClass", "Mass", nullptr));
-        totalcaloriesLabel->setText(QApplication::translate("DietCalcClass", "Total Calories: 0", nullptr));
-        pickButton->setText(QApplication::translate("DietCalcClass", "Pick", nullptr));
-        undoButton->setText(QApplication::translate("DietCalcClass", "Undo", nullptr));
-        chooseButton->setText(QApplication::translate("DietCalcClass", "Choose", nullptr));
-        testButton->setText(QApplication::translate("DietCalcClass", "TEST", nullptr));
+        caloriesLabel->setText(QApplication::translate("DietCalcClass", "Total calories wanted", nullptr));
+        titleLabel->setText(QApplication::translate("DietCalcClass", "<html><head/><body><p><span style=\" font-size:36pt;\">DietCalc</span></p></body></html>", nullptr));
+        nextButton->setText(QApplication::translate("DietCalcClass", "NEXT ->", nullptr));
+        mealsBox->setItemText(0, QApplication::translate("DietCalcClass", "3", nullptr));
+        mealsBox->setItemText(1, QApplication::translate("DietCalcClass", "4", nullptr));
+        mealsBox->setItemText(2, QApplication::translate("DietCalcClass", "5", nullptr));
+        mealsBox->setItemText(3, QApplication::translate("DietCalcClass", "6", nullptr));
+
+        mealsLabel->setText(QApplication::translate("DietCalcClass", "Amount of meals", nullptr));
     } // retranslateUi
 
 };
