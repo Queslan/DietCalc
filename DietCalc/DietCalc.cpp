@@ -6,13 +6,12 @@
 DietCalc::DietCalc(QWidget *parent)
 	:QMainWindow(parent) {
 	ui.setupUi(this);
-	//auto dataBase = new DataBase;
-	//dataBase->Connect();
 }
 
 
 void DietCalc::on_nextButton_clicked() {
-	//int chosenVariant = ui.mealsBox->currentIndex();
+	int chosenVariant = ui.mealsBox->currentIndex();
+	secondWindow.setupVariant(chosenVariant);
 	secondWindow.show();
 	this->hide();
 }

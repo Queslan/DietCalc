@@ -17,26 +17,30 @@ SecondWindow::SecondWindow(QWidget *parent)
 	ui.setupUi(this);
 
 	foodVector.reserve(5);
-	insertItems();
+//	insertItems();
 
+	DataBase db;
+	//char* sql = "SELECT Name from Food";
+	//db.PrintContents(sql);
+	db.FillVectorOfNames();
 
-	for (auto food : foodVector) {
-		ui.itemBox->addItem(QString::fromStdString(food->getName()));
+	for (auto name : db.FillVectorOfNames()) {
+		ui.itemBox->addItem(QString::fromStdString(name));
 	}
-	DataBase::Connect();
+	
 }
 
 SecondWindow::~SecondWindow() {
 }
 
 
-void SecondWindow::insertItems() {
-	foodVector.emplace_back(new Food("Carrot", 100.0, 0.0, 80.0, 20.0));
-	foodVector.emplace_back(new Food("Chicken", 300.0, 20.0, 0.0, 80.0));
-	foodVector.emplace_back(new Food("Soup", 500.0, 99.0, 0.0, 1.0));
-	foodVector.emplace_back(new Food("Pasta", 111.0, 22.0, 0.0, 33.0));
-	foodVector.emplace_back(new Food("Cheese", 666.0, 77.0, 0.0, 11.0));
-}
+//void SecondWindow::insertItems() {
+//	foodVector.emplace_back(new Food("Carrot", 100.0, 0.0, 80.0, 20.0));
+//	foodVector.emplace_back(new Food("Chicken", 300.0, 20.0, 0.0, 80.0));
+//	foodVector.emplace_back(new Food("Soup", 500.0, 99.0, 0.0, 1.0));
+//	foodVector.emplace_back(new Food("Pasta", 111.0, 22.0, 0.0, 33.0));
+//	foodVector.emplace_back(new Food("Cheese", 666.0, 77.0, 0.0, 11.0));
+//}
 
 Food* SecondWindow::getCurrentObject() {
 	auto current = ui.itemBox->currentIndex();
@@ -77,4 +81,8 @@ void SecondWindow::changeCalories() {
 
 	QString addedCalories = "Total Calories: " + QString::number(totalCalories);
 	ui.totalcaloriesLabel->setText(addedCalories);
+}
+
+void SecondWindow::setupVariant(int chosenVariant) {
+	this->chosenVariant = chosenVariant;
 }

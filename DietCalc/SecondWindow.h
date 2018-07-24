@@ -10,15 +10,16 @@ class SecondWindow : public QWidget {
 public:
 	SecondWindow(QWidget *parent = Q_NULLPTR);
 	~SecondWindow();
-
+	void setupVariant(int chosenVariant);
 private slots:
 	Food * getCurrentObject();
 	void on_pickButton_clicked();
-	void insertItems();
+	//void insertItems();
 	void on_chooseButton_clicked();
 	void on_undoButton_clicked();
 	void changeCalories();
 
 private:
+	int chosenVariant;
 	Ui::SecondWindow ui;
 };
