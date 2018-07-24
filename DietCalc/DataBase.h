@@ -3,6 +3,7 @@ class DataBase {
 public:
 	DataBase();
 	~DataBase();
-	int Connect();
+	static int Connect();
+	static int callback(void *data, int argc, char **argv, char **azColName);
 };
 

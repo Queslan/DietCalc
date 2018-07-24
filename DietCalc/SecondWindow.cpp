@@ -1,5 +1,6 @@
 #include "SecondWindow.h"
 #include "DietCalc.h"
+#include "DataBase.h"
 #include <iostream>
 #include <vector>
 #include <memory>
@@ -22,6 +23,7 @@ SecondWindow::SecondWindow(QWidget *parent)
 	for (auto food : foodVector) {
 		ui.itemBox->addItem(QString::fromStdString(food->getName()));
 	}
+	DataBase::Connect();
 }
 
 SecondWindow::~SecondWindow() {

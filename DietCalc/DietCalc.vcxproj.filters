@@ -95,5 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="sqlite3.dll" />
+    <None Include="MyDb.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ConceptArt\FirstWindow.png" />
   </ItemGroup>
 </Project>
