@@ -30,6 +30,10 @@ SecondWindow::SecondWindow(QWidget *parent)
 	
 }
 
+void SecondWindow::GiveValue() {
+	this->someValue = 5;
+}
+
 SecondWindow::~SecondWindow() {
 }
 

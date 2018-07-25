@@ -11,6 +11,8 @@ public:
 	SecondWindow(QWidget *parent = Q_NULLPTR);
 	~SecondWindow();
 	void setupVariant(int chosenVariant);
+	void GiveValue();
+	int someValue;
 private slots:
 	Food * getCurrentObject();
 	void on_pickButton_clicked();
@@ -18,6 +20,7 @@ private slots:
 	void on_chooseButton_clicked();
 	void on_undoButton_clicked();
 	void changeCalories();
+	
 
 private:
 	int chosenVariant;

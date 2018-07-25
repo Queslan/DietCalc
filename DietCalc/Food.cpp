@@ -23,6 +23,7 @@ void Food::updateFoodContents() {
 }
 
 bool Food::foodMapEmpty() {
+	//here
 	return foodMap.empty();
 }
 
